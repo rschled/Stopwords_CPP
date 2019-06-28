@@ -59,6 +59,10 @@ stopwords::stopwords(const string inWords)
 // Remove stop words from string
 void stopwords::remove_stopwords(string & str)
 {
+  if(str.length()==0)
+  {
+    return;
+  }
   size_t pos = string::npos;
   for(auto it=uwords.begin();it != uwords.end(); it++)
   {
